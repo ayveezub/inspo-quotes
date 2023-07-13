@@ -4,8 +4,6 @@
   --alt-fg: #7a79b7;
   --alt-bg: #00afb5;
   --font-size: 20px;
-
-  background-color: var(--bg);
 }
 
 @font-face {
@@ -31,13 +29,66 @@ body {
   grid-template-columns: 1fr min(100%, 80ch) 1fr;
   margin-left: 0.5rem;
   margin-right: 0.5rem;
-
+  
   font-family: Iosevka, sans-serif;
   font-size: var(--font-size);
   text-align: left;
   color: var(--fg);
+
+  min-height: 100%;
+
+  background: url("./src/assets/images/bg.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
 }
 
 body > * {
   grid-column: 2;
+}
+
+.inspo-quotes__intro-container,
+.inspo-quotes__card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.inspo-quotes__intro {
+  height: auto;
+  width: auto;
+  padding: 15px 0;
+}
+
+p.inspo-quotes__intro-text {
+  margin-top: 15px;
+}
+
+p.inspo-quotes__quote-text {
+  font-family: cursive;
+}
+
+p.inspo-quotes__quote-author {
+  text-align: right;
+  margin-top: 15px;
+}
+
+.inspo-quotes__card {
+  height: auto;
+  width: auto;
+  padding: 15px;
+  border: 2px solid var(--fg);
+  border-radius: 12px;
+  background: rgba(0,0,0,0.5);
+  color: var(--bg);
+
+  opacity: 0;
+  transition: opacity 500ms;
+}
+
+.inspo-quotes__card.observed {
+  opacity: 1;
 }
