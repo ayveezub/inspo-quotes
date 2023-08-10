@@ -1,4 +1,4 @@
-const quotesData = [
+const localQuotes = [
   {
     quoteText: "Genius is one percent inspiration and ninety-nine percent perspiration.",
     quoteAuthor: "Thomas Edison"
@@ -21685,4 +21685,4 @@ const quotesData = [
   }
 ]
 
-export { quotesData }
+export { localQuotes }

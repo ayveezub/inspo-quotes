@@ -1,0 +1,75 @@
+:root {
+  --bg: #ebe6f0;
+  --fg: #22181c;
+  --alt-fg: #7a79b7;
+  --alt-bg: #00afb5;
+  --font-size: 20px;
+}
+
+@font-face {
+  font-family: "Iosevka";
+  src: url("src/assets/fonts/iosevka-light.woff2") format("woff2");
+
+  font-stretch: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Iosevka, sans-serif;
+  font-size: var(--font-size);
+  text-align: left;
+  color: var(--fg);
+  background:  center / cover  no-repeat fixed url("./src/assets/images/bg.jpg");
+  min-height: 100%;
+}
+
+.random-quotes__card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  min-height: 100vh;
+  width: min(90%, 60ch);
+}
+
+.random-quotes__card {
+  min-height: auto;
+  width: auto;
+  padding: 15px;
+  border: 2px solid var(--fg);
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.5);
+  color: var(--bg);
+  opacity: 0;
+  transition: opacity 500ms;
+}
+
+.random-quotes__card.intro {
+  background: rgb(0, 0, 0, 0);
+  color: var(--fg);
+  border: none;
+}
+
+.random-quotes__card.observed {
+  opacity: 1;
+}
+
+p.random-quotes__intro-text {
+  text-align: center;
+  margin-top: 15px;
+}
+
+p.random-quotes__quote-text {
+  font-family: cursive;
+}
+
+p.random-quotes__quote-author {
+  text-align: right;
+  margin-top: 15px;
+}
